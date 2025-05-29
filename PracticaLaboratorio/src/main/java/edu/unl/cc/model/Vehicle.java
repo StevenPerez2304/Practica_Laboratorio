@@ -1,6 +1,8 @@
 package edu.unl.cc.model;
 
-public abstract class Vehicle {
+import java.io.Serializable;
+
+public abstract class Vehicle implements Serializable{
     private String credential;
     private double tonnage;
     private float fuel;
@@ -13,11 +15,8 @@ public abstract class Vehicle {
         this.tonnage = tonnage;
         this.fuel = fuel;
         this.lastFixDateMaintenance = lastFixDateMaintenance;
-    }
-    
-    
-    
-
+    }   
+ 
     public String getCredential() {
         return credential;
     }
