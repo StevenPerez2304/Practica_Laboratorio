@@ -6,19 +6,18 @@ import java.time.LocalDate;
 public class MaintenanceFacade implements Serializable {
 
     private LocalDate lastMaintenance;
-    private LocalDate today; 
 
-    private String needsMaintenance(int year, int month, int dayOfMonth) {
+    private boolean needsMaintenance(int year, int month, int dayOfMonth) {
         lastMaintenance = LocalDate.of(year, month, dayOfMonth);
-        today = LocalDate.now(); 
+        LocalDate today = LocalDate.now();
 
-        if (lastMaintenance.isBefore(today)){ //arreglar a 6 meses / 1 anio (isBeforeBy)
-            
-        }
-        return "";
+        LocalDate sixMonthsAgo = today.minusMonths(6);
+        LocalDate oneYearAgo = today.minusYears(1);
+
+        return lastMaintenance.isBefore(sixMonthsAgo) || lastMaintenance.isBefore(oneYearAgo);
     }
 
     private void updateDate() {
-
+        lastMaintenance = LocalDate.now(); 
     }
 }
