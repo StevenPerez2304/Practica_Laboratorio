@@ -12,7 +12,7 @@ public class MaintenanceFacade implements Serializable {
         lastMaintenance = LocalDate.of(year, month, dayOfMonth);
         today = LocalDate.now(); 
 
-        if (lastMaintenance.isBefore(today)){ //arreglar a 6 meses / 1 anio 
+        if (lastMaintenance.isBefore(today)){ //arreglar a 6 meses / 1 anio (isBeforeBy)
             
         }
         return "";
