@@ -1,22 +1,24 @@
 package edu.unl.cc.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public abstract class Vehicle implements Serializable{
     private String credential;
     private double tonnage;
-    private float fuel;
-    private String lastFixDateMaintenance;
+    private float consumptionFuel;
+    private LocalDate lastFixDateMaintenance;
     
     abstract void loadFuel();
+    abstract double getCostMaintenance();
 
-    public Vehicle(String credential, double tonnage, float fuel, String lastFixDateMaintenance) {
+    public Vehicle(String credential, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
         this.credential = credential;
         this.tonnage = tonnage;
-        this.fuel = fuel;
+        this.consumptionFuel = consumptionFuel;
         this.lastFixDateMaintenance = lastFixDateMaintenance;
-    }   
- 
+    }
+
     public String getCredential() {
         return credential;
     }
@@ -33,21 +35,23 @@ public abstract class Vehicle implements Serializable{
         this.tonnage = tonnage;
     }
 
-    public float getFuel() {
-        return fuel;
+    public float getConsumptionFuel() {
+        return consumptionFuel;
     }
 
-    public void setFuel(float fuel) {
-        this.fuel = fuel;
+    public void setConsumptionFuel(float fuel) {
+        this.consumptionFuel = fuel;
     }
 
-    public String getLastFixDateMaintenance() {
+    public LocalDate getLastFixDateMaintenance() {
         return lastFixDateMaintenance;
     }
 
-    public void setLastFixDateMaintenance(String lastFixDateMaintenance) {
+    public void setLastFixDateMaintenance(LocalDate lastFixDateMaintenance) {
         this.lastFixDateMaintenance = lastFixDateMaintenance;
     }
+
+
 
     @Override
     public String toString() {
@@ -55,7 +59,7 @@ public abstract class Vehicle implements Serializable{
         sb.append("Vehicle{");
         sb.append("credential=").append(credential);
         sb.append(", tonnage=").append(tonnage);
-        sb.append(", fuel=").append(fuel);
+        sb.append(", fuel=").append(consumptionFuel);
         sb.append(", lastFixDateMaintenance=").append(lastFixDateMaintenance);
         sb.append('}');
         return sb.toString();
