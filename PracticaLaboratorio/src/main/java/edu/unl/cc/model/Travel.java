@@ -40,12 +40,12 @@ public class Travel {
 
         // costo extra en caso de que la camioneta sea 4x4
         double extraFactor = 1.0; // establecemos en 1, porque así al multiplicar no hace nigún cambio
-        if (vehicle instanceof Van) { // solo si estámos en la camioneta debe hacer esto
-            Van van = (Van) vehicle; // con esto podemos usar los métodos de Van, con vehicle
-            if (van.isFourByFour()) {
-                extraFactor = 1.2; // si es True, lo transforma a 1.20 para el 20%
-            }
-        }
+//        if (vehicle instanceof Van) { // solo si estámos en la camioneta debe hacer esto
+//            Van van = (Van) vehicle; // con esto podemos usar los métodos de Van, con vehicle
+//            if (van.isFourByFour()) {
+//                extraFactor = 1.2; // si es True, lo transforma a 1.20 para el 20%
+//            }
+//        }
 
         return (baseCost + maintenanceCost) * extraFactor;
     }

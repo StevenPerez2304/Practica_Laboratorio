@@ -2,22 +2,36 @@ package edu.unl.cc.service;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 public class MaintenanceFacade implements Serializable {
 
     private LocalDate lastMaintenance;
 
-    private boolean needsMaintenance(int year, int month, int dayOfMonth) {
-        lastMaintenance = LocalDate.of(year, month, dayOfMonth);
-        LocalDate today = LocalDate.now();
-
-        LocalDate sixMonthsAgo = today.minusMonths(6);
-        LocalDate oneYearAgo = today.minusYears(1);
-
-        return lastMaintenance.isBefore(sixMonthsAgo) || lastMaintenance.isBefore(oneYearAgo);
+    public MaintenanceFacade(LocalDate lastMaintenance) {
+        this.lastMaintenance = lastMaintenance;
     }
 
-    private void updateDate() {
-        lastMaintenance = LocalDate.now(); 
+    public LocalDate getLastMaintenance() {
+        return lastMaintenance;
+    }
+
+    public boolean needsMaintenance() {
+        LocalDate today = LocalDate.now();
+        LocalDate sixMonthsAgo = today.minusMonths(6);
+        return lastMaintenance.isBefore(sixMonthsAgo);
+    }
+
+    public void updateMaintenanceDate() {
+        lastMaintenance = LocalDate.now();
+    }
+
+    public void setLastMaintenance(String dateStr) throws IllegalArgumentException {
+        try {
+            LocalDate date = LocalDate.parse(dateStr); 
+            this.lastMaintenance = date;
+        } catch (DateTimeParseException e) {
+            throw new IllegalArgumentException("Formato no valido, Debe ser YYYY-MM-DD.");
+        }
     }
 }
