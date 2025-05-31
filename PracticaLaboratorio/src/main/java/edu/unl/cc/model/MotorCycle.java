@@ -36,7 +36,7 @@ public class MotorCycle extends Vehicle {
         StringBuilder sb = new StringBuilder();
         sb.append("-Motocicleta- \n");
         sb.append("Cilindrada: ").append(displacement);
-        sb.append("\nPlaca: ").append(getCredential());
+        sb.append("\nPlaca: ").append(getcarLicense());
         sb.append("\nTonelaje").append(getTonnage());
         sb.append("\nCombustible: ").append(getConsumptionFuel());
         sb.append("\nUltima fecha de mantenimiento: ").append(getLastFixDateMaintenance());

@@ -36,7 +36,7 @@ public class Truck extends Vehicle {
         StringBuilder sb = new StringBuilder();
         sb.append("-Camión- \n");
         sb.append("Nro de ejes: ").append(numberAxes);
-        sb.append("\nPlaca: ").append(getCredential());
+        sb.append("\nPlaca: ").append(getcarLicense());
         sb.append("\nTonelaje").append(getTonnage());
         sb.append("\nCombustible: ").append(getConsumptionFuel());
         sb.append("\nUltima fecha de mantenimiento: ").append(getLastFixDateMaintenance());

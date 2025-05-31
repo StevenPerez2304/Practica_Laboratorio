@@ -4,27 +4,26 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public abstract class Vehicle implements Serializable{
-    private String credential;
+    private String carLicense;
     private double tonnage;
     private float consumptionFuel;
     private LocalDate lastFixDateMaintenance;
-    
     abstract void loadFuel();
     abstract double getCostMaintenance();
 
-    public Vehicle(String credential, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
-        this.credential = credential;
+    public Vehicle(String carLicense, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
+        this.carLicense = carLicense;
         this.tonnage = tonnage;
         this.consumptionFuel = consumptionFuel;
         this.lastFixDateMaintenance = lastFixDateMaintenance;
     }
 
-    public String getCredential() {
-        return credential;
+    public String getcarLicense() {
+        return carLicense;
     }
 
-    public void setCredential(String credential) {
-        this.credential = credential;
+    public void setcarLicense(String carLicense) {
+        this.carLicense = carLicense;
     }
 
     public double getTonnage() {
@@ -52,16 +51,18 @@ public abstract class Vehicle implements Serializable{
     }
 
 
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Vehicle{");
-        sb.append("credential=").append(credential);
+        sb.append("carLicense=").append(carLicense);
         sb.append(", tonnage=").append(tonnage);
         sb.append(", fuel=").append(consumptionFuel);
         sb.append(", lastFixDateMaintenance=").append(lastFixDateMaintenance);
         sb.append('}');
         return sb.toString();
     }
+
+
+
 }

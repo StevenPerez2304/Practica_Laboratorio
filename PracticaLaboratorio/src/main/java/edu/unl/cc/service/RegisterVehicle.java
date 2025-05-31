@@ -16,7 +16,7 @@ public class RegisterVehicle implements Serializable {
     private final List<Travel> travelList = new ArrayList<>();
 
     public void registerVehicle(Vehicle vehicle) throws IllegalArgumentException {
-        String credential = vehicle.getCredential();
+        String credential = vehicle.getcarLicense();
         if (credential == null || credential.trim().isEmpty()) {
             throw new IllegalArgumentException("La credencial no puede ser nula o estar vacía");
         }

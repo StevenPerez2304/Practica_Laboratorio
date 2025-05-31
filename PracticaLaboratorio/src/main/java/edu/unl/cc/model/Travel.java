@@ -50,7 +50,7 @@ public class Travel {
         double extraFactor = 1.0; // establecemos en 1, porque así al multiplicar no hace nigún cambio
         if (vehicle instanceof Van) { // solo si estámos en la camioneta debe hacer esto
            Van van = (Van) vehicle; // con esto podemos usar los métodos de Van, con vehicle
-            if (van.isFourByFour()) {
+            if (van.isDoubleTraction()) {
                 extraFactor = 1.2; // si es True, lo transforma a 1.20 para el 20%
             }
         }
@@ -96,7 +96,7 @@ public class Travel {
         StringBuilder sb = new StringBuilder();
         sb.append("Viaje realizado en fecha: ").append(travelDate)
                 .append(" | Distancia: ").append(distanceTravelled).append(" km")
-                .append(" | Vehículo: ").append(vehicle.getCredential())
+                .append(" | Vehículo: ").append(vehicle.getcarLicense())
                 .append(" | Costo total: $").append(String.format("%.2f", calculateCost()));
         return sb.toString();
     }
