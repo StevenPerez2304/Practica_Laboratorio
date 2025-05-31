@@ -3,12 +3,11 @@ package edu.unl.cc.model;
 import java.time.LocalDate;
 
 public class Van extends Vehicle {
-
     private boolean doubleTraction; //simple (4*2) o doble (4*4)
-    private static double costMaintenance;
+    private static final double COST_MAINTENANCE = 300.0;
 
-    public Van(String credential, double tonnage, float fuel, LocalDate lastFixDateMaintenance, boolean doubleTraction) {
-        super(credential, tonnage, fuel, lastFixDateMaintenance);
+    public Van(String carLicense, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance, boolean doubleTraction) {
+        super(carLicense, tonnage, consumptionFuel, lastFixDateMaintenance);
         this.doubleTraction = doubleTraction;
     }
 
@@ -17,13 +16,17 @@ public class Van extends Vehicle {
 
     @Override
     double getCostMaintenance() {
-        return 0;
+        return COST_MAINTENANCE;
     }
 
     public boolean isDoubleTraction() {
         return doubleTraction;
     }
+    public void setDoubleTraction(boolean doubleTraction) {
+        this.doubleTraction = doubleTraction;
+    }
 
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("-Van- ");

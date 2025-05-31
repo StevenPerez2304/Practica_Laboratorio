@@ -6,16 +6,16 @@ public class MotorCycle extends Vehicle {
 
     private int displacement; //cilindrada 
     private static final double COST_MAINTENANCE = 100.0;
-    private static final float CONSUMPTION_FUEL = 0.03f;
-    
-    public MotorCycle(int displacement, String credential, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
-        super(credential, tonnage, CONSUMPTION_FUEL, lastFixDateMaintenance);
+
+    public MotorCycle(int displacement, String carLicense,double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
+        super(carLicense, tonnage, consumptionFuel, lastFixDateMaintenance);
         this.displacement = displacement;
     }
 
     public int getDisplacement() {
         return displacement;
     }
+
 
     public void setDisplacement(int displacement) {
         this.displacement = displacement;
