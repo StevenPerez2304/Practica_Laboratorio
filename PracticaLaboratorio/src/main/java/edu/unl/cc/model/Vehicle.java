@@ -64,7 +64,4 @@ public abstract class Vehicle implements Serializable{
         sb.append('}');
         return sb.toString();
     }
-    
-    
-    
 }

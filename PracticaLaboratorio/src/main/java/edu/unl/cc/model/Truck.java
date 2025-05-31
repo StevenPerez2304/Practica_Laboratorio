@@ -30,4 +30,16 @@ public class Truck extends Vehicle {
     public double getCostMaintenance() {
         return COST_MAINTENANCE;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("-Camión- \n");
+        sb.append("Nro de ejes: ").append(numberAxes);
+        sb.append("\nPlaca: ").append(getCredential());
+        sb.append("\nTonelaje").append(getTonnage());
+        sb.append("\nCombustible: ").append(getConsumptionFuel());
+        sb.append("\nUltima fecha de mantenimiento: ").append(getLastFixDateMaintenance());
+        return sb.toString();
+    }
 }

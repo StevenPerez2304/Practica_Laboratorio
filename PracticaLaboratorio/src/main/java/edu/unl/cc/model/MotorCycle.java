@@ -6,7 +6,7 @@ public class MotorCycle extends Vehicle {
 
     private int displacement; //cilindrada 
     private static final double COST_MAINTENANCE = 100.0;
-    private static final float CONSUMPTION_FUEL = 0.3f;
+    private static final float CONSUMPTION_FUEL = 0.03f;
     
     public MotorCycle(int displacement, String credential, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
         super(credential, tonnage, CONSUMPTION_FUEL, lastFixDateMaintenance);
@@ -39,7 +39,7 @@ public class MotorCycle extends Vehicle {
         sb.append("\nPlaca: ").append(getCredential());
         sb.append("\nTonelaje").append(getTonnage());
         sb.append("\nCombustible: ").append(getConsumptionFuel());
-        sb.append("\nUltima fecha de mantenimietno: ").append(getLastFixDateMaintenance());
+        sb.append("\nUltima fecha de mantenimiento: ").append(getLastFixDateMaintenance());
         return sb.toString();
     }
 }
