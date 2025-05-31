@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class MotorCycle extends Vehicle {
 
     private int displacement; //cilindrada 
-    private static final double COST_MAINTENANCE = 400.0;
+    private static final double COST_MAINTENANCE = 100.0;
     private static final float CONSUMPTION_FUEL = 0.3f;
     
     public MotorCycle(int displacement, String credential, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
