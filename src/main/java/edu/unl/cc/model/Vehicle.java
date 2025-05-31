@@ -1,5 +1,4 @@
 package edu.unl.cc.model;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -10,7 +9,7 @@ public abstract class Vehicle implements Serializable{
     private LocalDate lastFixDateMaintenance;
     abstract void loadFuel();
     abstract double getCostMaintenance();
-
+    //constructor de vehicle basic
     public Vehicle(String carLicense, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
         this.carLicense = carLicense;
         this.tonnage = tonnage;
@@ -49,8 +48,6 @@ public abstract class Vehicle implements Serializable{
     public void setLastFixDateMaintenance(LocalDate lastFixDateMaintenance) {
         this.lastFixDateMaintenance = lastFixDateMaintenance;
     }
-
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -62,7 +59,5 @@ public abstract class Vehicle implements Serializable{
         sb.append('}');
         return sb.toString();
     }
-
-
 
 }

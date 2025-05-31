@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c235d628-df12-4037-b5ca-f1ae76e999c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/MotorCycle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Travel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Truck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Van.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/service/MaintenanceFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/service/RegisterVehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/view/VehicleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/MotorCycle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/Travel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/Truck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/Van.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/Vehicle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/service/MaintenanceFacade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/service/RegisterVehicle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/view/VehicleManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
