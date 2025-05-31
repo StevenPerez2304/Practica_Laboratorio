@@ -7,6 +7,7 @@ public class Travel {
     private LocalDate travelDate;
     private static double fuelPrice;
     private Vehicle vehicle;
+    private boolean performMaintenance = false; // para sumar o no el costo del mantenimiento
 
     public Travel(LocalDate travelDate, double distanceTravelled, Vehicle vehicle) {
         if (travelDate == null) {
@@ -23,14 +24,15 @@ public class Travel {
         this.vehicle = vehicle;
     }
 
+    public boolean isEmpty() {
+        return travelDate == null || distanceTravelled <= 0 || vehicle == null;
+    }
+
     // getter estático para obtener el precio del combustible
     public static double getFuelPrice() {
         return fuelPrice;
     }
 
-    public boolean isEmpty() {
-        return travelDate == null || distanceTravelled <= 0 || vehicle == null;
-    }
 
     public static void setFuelPrice(double fuelPrice) {
         if (fuelPrice <= 0) {
@@ -39,9 +41,13 @@ public class Travel {
         Travel.fuelPrice = fuelPrice; // pasar el valor a la variable estática
     }
 
+
+
     public double calculateCost() {
         double fuelConsumption = vehicle.getConsumptionFuel(); // obtener el consumo en base al vehículo seleccionado
-        double maintenanceCost = vehicle.getCostMaintenance(); // obtener el costo de mantenimiento en base al vehículo seleccionado
+
+        // Si el usuario dice que si, se retorna un True con el método obteniendo el costo de mantenimiento
+        double maintenanceCost = performMaintenance ? vehicle.getCostMaintenance() : 0.0;
 
         // calcular el costo base sin tener en cuenta todavía el mantenimiento
         double baseCost = distanceTravelled * fuelConsumption * fuelPrice;
@@ -80,6 +86,7 @@ public class Travel {
         this.travelDate = travelDate;
     }
 
+
     public Vehicle getVehicle() {
         return vehicle;
     }
@@ -89,6 +96,14 @@ public class Travel {
             throw new IllegalArgumentException("El vehículo no puede ser nulo");
         }
         this.vehicle = vehicle;
+    }
+
+    public boolean isPerformMaintenance() {
+        return performMaintenance;
+    }
+
+    public void setPerformMaintenance(boolean performMaintenance) {
+        this.performMaintenance = performMaintenance;
     }
 
     @Override
