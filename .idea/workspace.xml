@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cbdc8-e59d-4ac2-82bb-5baad360e622" name="Changes" comment="" />
+    <list default="true" id="c235d628-df12-4037-b5ca-f1ae76e999c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/MotorCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Travel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Truck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Van.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/model/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/service/MaintenanceFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/service/RegisterVehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unl/cc/view/VehicleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/MotorCycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/Travel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/Truck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/Van.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/model/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/service/MaintenanceFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/service/RegisterVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaLaboratorio/src/main/java/edu/unl/cc/view/VehicleManager.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +39,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "StevenPerez2304"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/StevenPerez2304/Practica_Laboratorio.git",
+    "accountId": "5af63d90-5ab5-4866-879e-2c1844e3fdd9"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -21,21 +59,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Steven/Desktop/Practica_Laboratorio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Steven/Desktop/Practica_Laboratorio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
