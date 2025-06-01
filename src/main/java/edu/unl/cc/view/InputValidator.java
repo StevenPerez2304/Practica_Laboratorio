@@ -1,10 +1,3 @@
-/**
- * Link del repositorio: https://github.com/StevenPerez2304/Practica_Laboratorio.git
- * Integrantes:
- * Coello Anderson
- * Flores Emilio
- * Jumbo Steven
- * Perez Steven*/
 package edu.unl.cc.view;
 
 import java.time.LocalDate;
@@ -14,13 +7,15 @@ import java.util.Scanner;
 
 public class InputValidator {
 
-    public static int getValidInt(Scanner scanner, int min, int max) throws InputMismatchException{
-        //metodo para validar si el numero ingresado es un numero entero y esta dentro del rango
+    public static int getValidInt(Scanner scanner, int min, int max) {
+        //metodo para validar numeros enteros y que este dentro del rango permitido
         while (true) {
             try {
                 int value = scanner.nextInt();
                 scanner.nextLine();
-                if (value >= min && value <= max) return value;
+                if (value >= min && value <= max) {
+                    return value;
+                }
                 System.out.print("Valor fuera de rango (" + min + "-" + max + "). Intente nuevamente: ");
             } catch (InputMismatchException e) {
                 System.out.print("Debe ingresar un numero entero. Intente nuevamente: ");
@@ -29,13 +24,15 @@ public class InputValidator {
         }
     }
 
-    public static double getValidDouble(Scanner scanner, double min, double max) throws InputMismatchException{
-        //metodo para validar si el numero ingresado es double y esta dentro del rango
+    public static double getValidDouble(Scanner scanner, double min, double max) {
+        //metodo para validar numeros doubles y que este dentro del rango
         while (true) {
             try {
                 double value = scanner.nextDouble();
                 scanner.nextLine();
-                if (value >= min && value <= max) return value;
+                if (value >= min && value <= max) {
+                    return value;
+                }
                 System.out.print("Valor fuera de rango (" + min + "-" + max + "). Intente nuevamente: ");
             } catch (InputMismatchException e) {
                 System.out.print("Debe ingresar un numero valido. Intente nuevamente: ");
@@ -44,14 +41,15 @@ public class InputValidator {
         }
     }
 
-    public static float getValidFloat(Scanner scanner, float min, float max) throws InputMismatchException{
-        //metodo para validar si el numero ingresado es un float y esta dentro del rango
-
+    public static float getValidFloat(Scanner scanner, float min, float max)  {
+        //metodo para validar numeros flotantes y que esten dentro del rango
         while (true) {
             try {
                 float value = scanner.nextFloat();
                 scanner.nextLine();
-                if (value >= min && value <= max) return value;
+                if (value >= min && value <= max) {
+                    return value;
+                }
                 System.out.print("Valor fuera de rango (" + min + "-" + max + "). Intente nuevamente: ");
             } catch (InputMismatchException e) {
                 System.out.print("Debe ingresar un numero valido. Intente nuevamente: ");
@@ -61,7 +59,7 @@ public class InputValidator {
     }
 
     public static LocalDate getValidDate(Scanner scanner) {
-        //metodo para validar el LocalDate
+        //metodo para validar el formato de la fecha ingresada por el conductor
         while (true) {
             try {
                 return LocalDate.parse(scanner.nextLine().trim());
@@ -72,11 +70,15 @@ public class InputValidator {
     }
 
     public static boolean getYesNoResponse(Scanner scanner) {
-        //a este metodo se lo usara en el isDoubleTraccion, para retornar en un true o false
+        //metodo para validar correctamente si o no
         while (true) {
             String response = scanner.nextLine().trim().toLowerCase();
-            if (response.equals("s")) return true;
-            if (response.equals("n")) return false;
+            if ("s".equals(response)) {
+                return true;
+            }
+            if ("n".equals(response)) {
+                return false;
+            }
             System.out.print("Respuesta invalida. Ingrese 's' o 'n': ");
         }
     }
