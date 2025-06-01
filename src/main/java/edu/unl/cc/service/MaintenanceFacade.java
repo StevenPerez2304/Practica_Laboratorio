@@ -1,3 +1,10 @@
+/**
+ * Link del repositorio: https://github.com/StevenPerez2304/Practica_Laboratorio.git
+ * Integrantes:
+ * Coello Anderson
+ * Flores Emilio
+ * Jumbo Steven
+ * Perez Steven*/
 package edu.unl.cc.service;
 
 import java.io.Serializable;
@@ -26,6 +33,11 @@ public class MaintenanceFacade implements Serializable {
         lastMaintenance = LocalDate.now();
     }
 
+    /**
+     * 
+     * @param dateStr
+     * @throws IllegalArgumentException 
+     */
     public void setLastMaintenance(String dateStr) throws IllegalArgumentException {
         try {
             LocalDate date = LocalDate.parse(dateStr); 

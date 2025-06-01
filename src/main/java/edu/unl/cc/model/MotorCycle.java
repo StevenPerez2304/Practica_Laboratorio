@@ -1,3 +1,10 @@
+/**
+ * Link del repositorio: https://github.com/StevenPerez2304/Practica_Laboratorio.git
+ * Integrantes:
+ * Coello Anderson
+ * Flores Emilio
+ * Jumbo Steven
+ * Perez Steven*/
 package edu.unl.cc.model;
 
 import java.time.LocalDate;
