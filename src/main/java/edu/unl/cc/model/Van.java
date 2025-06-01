@@ -15,7 +15,7 @@ public class Van extends Vehicle {
     void loadFuel() {System.out.println("Cargando " + getConsumptionFuel());}
 
     @Override
-    double getCostMaintenance() {
+    public double getCostMaintenance() {
         return COST_MAINTENANCE;
     }
 

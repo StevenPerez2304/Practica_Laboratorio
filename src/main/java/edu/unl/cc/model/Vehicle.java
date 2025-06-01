@@ -8,7 +8,7 @@ public abstract class Vehicle implements Serializable{
     private float consumptionFuel;
     private LocalDate lastFixDateMaintenance;
     abstract void loadFuel();
-    abstract double getCostMaintenance();
+    public abstract double getCostMaintenance();
     //constructor de vehicle basic
     public Vehicle(String carLicense, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance) {
         this.carLicense = carLicense;
