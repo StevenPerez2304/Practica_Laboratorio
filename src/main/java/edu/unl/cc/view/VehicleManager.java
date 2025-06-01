@@ -74,6 +74,7 @@ public class VehicleManager {
         System.out.print("Seleccione una opcion: \n");
     }
 
+    
     private static void registerVehicle() {
         System.out.println("\nREGISTRO DE VEHICULO");
         System.out.println("Tipo de vehiculo (1: Moto, 2: Camioneta, 3: Camion): ");
@@ -103,11 +104,18 @@ public class VehicleManager {
                     registerTruck(licensePlate, capacity, consumption, lastMaintenanceDate);
                     break;
             }
-            System.out.println("\nVehiculo " + licensePlate + " registrado exitosamente.");
+            System.out.println("\nVehiculo con placa " + licensePlate + " registrado exitosamente.");
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
+    /**
+     * 
+     * @param plate
+     * @param capacity
+     * @param consumption
+     * @param date 
+     */
 
     private static void registerMotorcycle(String plate, double capacity, float consumption, LocalDate date) {
         System.out.print("Cilindrada (cc): ");
@@ -165,6 +173,7 @@ public class VehicleManager {
         }
     }
 
+    
     private static void updateMaintenance() {
         System.out.println("\nACTUALIZACION DE MANTENIMIENTO");
         System.out.print("Placa del vehiculo: ");
@@ -184,7 +193,6 @@ public class VehicleManager {
         System.out.println(register.displayVehicle());
     }
 
-    // ===== HELPER METHODS =====
     private static void checkMaintenanceAlert(Vehicle vehicle) {
         MaintenanceFacade maintenance = new MaintenanceFacade(vehicle.getLastFixDateMaintenance());
         if (maintenance.needsMaintenance()) {
@@ -213,6 +221,12 @@ public class VehicleManager {
     }
 
     // método para el switch de elegir el tipo de vehiculo, y validar que elija entre 1 a 3 como opciones
+    /**
+     * 
+     * @param min
+     * @param max
+     * @return 
+     */
     private static int getValidInt(int min, int max) {
         while (true) {
             try {
@@ -228,6 +242,12 @@ public class VehicleManager {
         }
     }
 
+    /**
+     * 
+     * @param min
+     * @param max
+     * @return 
+     */
     private static double getValidDouble(double min, double max) {
         while (true) {
             try {
@@ -242,6 +262,12 @@ public class VehicleManager {
         }
     }
 
+    /**
+     * 
+     * @param min
+     * @param max
+     * @return 
+     */
     private static float getValidFloat(float min, float max) {
         while (true) {
             try {

@@ -10,9 +10,9 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public abstract class Vehicle implements Serializable{
-    private String carLicense;
+    private String carLicense; //placa
     private double tonnage;
-    private float consumptionFuel;
+    private float consumptionFuel; 
     private LocalDate lastFixDateMaintenance;
     abstract void loadFuel();
     public abstract double getCostMaintenance();
@@ -58,12 +58,11 @@ public abstract class Vehicle implements Serializable{
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Vehicle{");
-        sb.append("carLicense=").append(carLicense);
-        sb.append(", tonnage=").append(tonnage);
-        sb.append(", fuel=").append(consumptionFuel);
-        sb.append(", lastFixDateMaintenance=").append(lastFixDateMaintenance);
-        sb.append('}');
+        sb.append("Vehiculo");
+        sb.append("\nPlaca: ").append(carLicense);
+        sb.append("\nTonelaje: ").append(tonnage);
+        sb.append("\nCombustible: ").append(consumptionFuel);
+        sb.append("\nUltima fecha de mantenimiento: ").append(lastFixDateMaintenance);
         return sb.toString();
     }
 

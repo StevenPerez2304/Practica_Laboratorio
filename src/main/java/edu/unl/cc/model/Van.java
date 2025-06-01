@@ -4,12 +4,13 @@
  * Coello Anderson
  * Flores Emilio
  * Jumbo Steven
- * Perez Steven*/
+ * Perez Steven */
 package edu.unl.cc.model;
 
 import java.time.LocalDate;
 
 public class Van extends Vehicle {
+
     private boolean doubleTraction; //simple (4*2) o doble (4*4)
     private static final double COST_MAINTENANCE = 300.0;
 
@@ -19,7 +20,9 @@ public class Van extends Vehicle {
     }
 
     @Override
-    void loadFuel() {System.out.println("Cargando " + getConsumptionFuel());}
+    void loadFuel() {
+        System.out.println("Cargando " + getConsumptionFuel());
+    }
 
     @Override
     public double getCostMaintenance() {
@@ -29,6 +32,7 @@ public class Van extends Vehicle {
     public boolean isDoubleTraction() {
         return doubleTraction;
     }
+
     public void setDoubleTraction(boolean doubleTraction) {
         this.doubleTraction = doubleTraction;
     }
@@ -36,12 +40,16 @@ public class Van extends Vehicle {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("-Van- ");
-        sb.append("doubleTraction=").append(doubleTraction);
-        sb.append("Placa: ").append(getcarLicense());
-        sb.append("Tonelaje").append(getTonnage());
-        sb.append("Combustible: ").append(getConsumptionFuel());
-        sb.append("ultima fecha de mantenimietno: ").append(getLastFixDateMaintenance());
+        sb.append("-Camioneta- \n");
+        if (doubleTraction == true) {
+            sb.append("Doble traccion: ").append("SI");
+        } else {
+            sb.append("Doble traccion: ").append("NO");
+        }
+        sb.append("\nPlaca: ").append(getcarLicense());
+        sb.append("\nTonelaje").append(getTonnage());
+        sb.append("\nCombustible: ").append(getConsumptionFuel());
+        sb.append("\nUltima fecha de mantenimiento: ").append(getLastFixDateMaintenance());
         return sb.toString();
     }
 }
