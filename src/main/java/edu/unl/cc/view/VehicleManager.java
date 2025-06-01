@@ -100,7 +100,7 @@ public class VehicleManager {
                 case 2: // camioneta
                     registerVan(licensePlate, capacity, consumption, lastMaintenanceDate);
                     break;
-                case 3: // camión
+                case 3: // camion
                     registerTruck(licensePlate, capacity, consumption, lastMaintenanceDate);
                     break;
             }
@@ -109,13 +109,6 @@ public class VehicleManager {
             System.out.println("Error: " + e.getMessage());
         }
     }
-    /**
-     * 
-     * @param plate
-     * @param capacity
-     * @param consumption
-     * @param date 
-     */
 
     private static void registerMotorcycle(String plate, double capacity, float consumption, LocalDate date) {
         System.out.print("Cilindrada (cc): ");
@@ -173,7 +166,6 @@ public class VehicleManager {
         }
     }
 
-    
     private static void updateMaintenance() {
         System.out.println("\nACTUALIZACION DE MANTENIMIENTO");
         System.out.print("Placa del vehiculo: ");
@@ -196,7 +188,7 @@ public class VehicleManager {
     private static void checkMaintenanceAlert(Vehicle vehicle) {
         MaintenanceFacade maintenance = new MaintenanceFacade(vehicle.getLastFixDateMaintenance());
         if (maintenance.needsMaintenance()) {
-            System.out.println("¡ALERTA! Mantenimiento pendiente desde " +
+            System.out.println("ALERTA!!!!! Mantenimiento pendiente desde " +
                     vehicle.getLastFixDateMaintenance());
         }
     }
@@ -221,18 +213,12 @@ public class VehicleManager {
     }
 
     // método para el switch de elegir el tipo de vehiculo, y validar que elija entre 1 a 3 como opciones
-    /**
-     * 
-     * @param min
-     * @param max
-     * @return 
-     */
     private static int getValidInt(int min, int max) {
         while (true) {
             try {
                 int value = scanner.nextInt();
                 scanner.nextLine();  // Limpiar buffer
-                if (value >= min && value <= max) // si no está dentro de 1 - 3, pues no funcionará
+                if (value >= min && value <= max) // si no está dentro de 1 - 3, no funcionará
                     return value;
                 System.out.print("Valor fuera de rango (" + min + "-" + max + "). Intente nuevamente: ");
             } catch (InputMismatchException e) {
@@ -242,12 +228,6 @@ public class VehicleManager {
         }
     }
 
-    /**
-     * 
-     * @param min
-     * @param max
-     * @return 
-     */
     private static double getValidDouble(double min, double max) {
         while (true) {
             try {
@@ -262,12 +242,6 @@ public class VehicleManager {
         }
     }
 
-    /**
-     * 
-     * @param min
-     * @param max
-     * @return 
-     */
     private static float getValidFloat(float min, float max) {
         while (true) {
             try {

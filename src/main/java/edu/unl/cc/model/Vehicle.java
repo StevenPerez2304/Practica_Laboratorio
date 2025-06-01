@@ -65,5 +65,4 @@ public abstract class Vehicle implements Serializable{
         sb.append("\nUltima fecha de mantenimiento: ").append(lastFixDateMaintenance);
         return sb.toString();
     }
-
 }

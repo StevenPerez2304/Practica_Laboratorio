@@ -26,8 +26,6 @@ public class Truck extends Vehicle {
         this.numberAxes = numberAxes;
     }
 
-
-
     @Override
     public void loadFuel() {
         System.out.println("Cargando combustible: " + getConsumptionFuel() + " L/km");

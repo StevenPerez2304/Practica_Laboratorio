@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class Van extends Vehicle {
 
     private boolean doubleTraction; //simple (4*2) o doble (4*4)
-    private static final double COST_MAINTENANCE = 300.0;
+    private static final double COST_MAINTENANCE = 300.0; //Constante para el precio de el combustible
 
     public Van(String carLicense, double tonnage, float consumptionFuel, LocalDate lastFixDateMaintenance, boolean doubleTraction) {
         super(carLicense, tonnage, consumptionFuel, lastFixDateMaintenance);
@@ -38,7 +38,7 @@ public class Van extends Vehicle {
     }
 
     @Override
-    public String toString() {
+    public String toString() { //metodo para presentar la van con todos sus atributos
         StringBuilder sb = new StringBuilder();
         sb.append("-Camioneta- \n");
         if (doubleTraction == true) {
@@ -47,7 +47,7 @@ public class Van extends Vehicle {
             sb.append("Doble traccion: ").append("NO");
         }
         sb.append("\nPlaca: ").append(getcarLicense());
-        sb.append("\nTonelaje").append(getTonnage());
+        sb.append("\nTonelaje: ").append(getTonnage());
         sb.append("\nCombustible: ").append(getConsumptionFuel());
         sb.append("\nUltima fecha de mantenimiento: ").append(getLastFixDateMaintenance());
         return sb.toString();

@@ -24,6 +24,7 @@ public class MaintenanceFacade implements Serializable {
     }
 
     public boolean needsMaintenance() {
+        //metodo para saber si el vehiculo necesita mantenimiento
         LocalDate today = LocalDate.now();
         LocalDate sixMonthsAgo = today.minusMonths(6);
         return lastMaintenance.isBefore(sixMonthsAgo);
@@ -32,6 +33,7 @@ public class MaintenanceFacade implements Serializable {
     public void updateMaintenanceDate() {
         lastMaintenance = LocalDate.now();
     }
+    //metodo para actualizar el mantenimiento y su fecha
 
     /**
      * 
